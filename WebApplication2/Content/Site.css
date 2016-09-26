@@ -16,6 +16,28 @@
     white-space: normal;
 }
 
+.userBlock{
+    width: 30%;
+    height: auto;
+    margin-bottom: 2px;
+    border: 2px solid black;
+}
+
+.userField{
+    width: 100%;
+    margin: 2px;
+    display: inline-block;
+    margin: 2px;
+}
+.name{
+    float:left;
+    margin: 2px;
+}
+.date{
+    float:right;
+    display: inline-block;
+    margin: 2px;
+}
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,

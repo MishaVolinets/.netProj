@@ -7,14 +7,24 @@ namespace WebApplication2.Models
 {
     public class User
     {
-        public string Name { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Location { get; set; }
+        public string School { set; get; }
+        public DateTime DateOfRegister { get; set; }
 
-        public int Age { get; set; }
-
-        public User(string name, int age)
+        public User(string _FirstName, string _LastName, string _Location, string _School)
         {
-            Name = name;
-            Age = age;
+            FirstName = _FirstName;
+            LastName = _LastName;
+            Location = _Location;
+            School = _School;
+            DateOfRegister = DateTime.Now;
+        }
+
+        public User()
+        {
+
         }
         
 

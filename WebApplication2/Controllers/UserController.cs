@@ -13,9 +13,9 @@ namespace WebApplication2.Controllers
         public ActionResult Information()
         {
             List<User> list = new List<User>();
-            list.Add(new User("Misha",12));
-            list.Add(new User("Dmitry", 14));
-
+            list.Add(new User("Misha","Volinets","Ukraine","14"));
+            list.Add(new User("Dmitro", "Rakochiy", "Belarus", "1"));
+            list.Add(new Models.User("Andry","Derdzyak","Poland","12"));
             return View(list);
         }
     }
