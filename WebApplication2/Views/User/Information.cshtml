@@ -2,7 +2,9 @@
 @{
     ViewBag.Title = "Information";
 }
-@model WebApplication2.Models.User
+@model List<WebApplication2.Models.User>
 <h2>User information: </h2>
-<p>Name: @Model.Name, age: @Model.Age</p>
-
+@foreach(var instance in @Model)
+{
+    <p>Name: @instance.Name Age: @instance.Age</p>
+}

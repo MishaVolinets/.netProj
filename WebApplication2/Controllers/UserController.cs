@@ -12,8 +12,11 @@ namespace WebApplication2.Controllers
         // GET: User
         public ActionResult Information()
         {
-            User us1 = new User("Misha",14);
-            return View(us1);
+            List<User> list = new List<User>();
+            list.Add(new User("Misha",12));
+            list.Add(new User("Dmitry", 14));
+
+            return View(list);
         }
     }
 }

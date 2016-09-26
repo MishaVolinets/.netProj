@@ -23,7 +23,7 @@ namespace WebApplication2.Controllers
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
-
+            UserController uc = new UserController();
             return View();
         }
     }
