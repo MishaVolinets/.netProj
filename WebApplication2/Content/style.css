@@ -1,0 +1,25 @@
+
+
+.massageBlock{
+	width: 35%;
+	background-color: #61B2FA;
+	height: 250px;
+	padding: 10px;
+	border-radius: 5px;
+}
+.insideMassageBlock{
+	margin: auto;
+	width:100%;
+	height: 100%;
+}
+.inputBlock{
+	width: 100%;
+	display: inline-block;
+}
+.Text{
+	font-size: 16px;
+	float: left;
+}
+.Input{
+	float: right;
+}

@@ -4,14 +4,53 @@
 }
 @model List<WebApplication2.Models.User>
 <h2>User information: </h2>
-    @foreach (var instance in @Model)
+@if (@Model != null)
+{
+    foreach (var instance in @Model)
     {
-        <div class="userBlock">
-            <div class="userField">
-                <div class="name">@instance.FirstName @instance.LastName</div>
-                <div class="date">@instance.DateOfRegister</div>
+            <div class="userBlock">
+                <div class="userField">
+                    <div class="name">@instance.FirstName @instance.LastName</div>
+                    <div class="date">@instance.DateOfRegister</div>
+                </div>
+                <div class="userField">@instance.Location</div>
+                <div class="userField">@instance.School</div>
             </div>
-            <div class="userField">@instance.Location</div>
-            <div class="userField">@instance.School</div>
-        </div>    
     }
+}
+
+<form method="post" action="/User/sentPost">
+    <div class="massageBlock">
+        <div class="insideMassageBlock">
+            <div class="inputBlock">
+                <div class="Text">Title</div>
+                <div class="Input">
+                    <input type="text" name="Title">
+                </div>
+            </div>
+            <div class="inputBlock">
+                <div class="Text">Text</div>
+                <div class="Input">
+                    <textarea rows="6" cols="21" name="Description"></textarea>
+                </div>
+            </div>
+            <div class="inputBlock">
+                <input type="submit" value="Send post" onclick="">
+            </div>
+        </div>
+    </div>
+</form>
+
+@if(WebApplication2.Controllers.UserController.mas.Count != 0)
+{
+    foreach (var instan in WebApplication2.Controllers.UserController.mas)
+    {
+        <h2>@instan.Title</h2>
+        <p>@instan.Description</p>
+        <p>@instan.dateOfCreate</p>
+        if (!instan.Equals(WebApplication2.Controllers.UserController.mas[WebApplication2.Controllers.UserController.mas.Count - 1]))
+        {
+            <hr>
+        }
+    }
+}
